@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>放开那个姑娘吖</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="常用DSL语句查看所有索引1GET /_cat/indices?v  删除某个索引1DELETE /skuinfo  新增索引1PUT /user">
+  <meta name="description" content="常用DSL语句">
 <meta property="og:type" content="article">
 <meta property="og:title" content="放开那个姑娘吖">
 <meta property="og:url" content="http://yoursite.com/2019/08/17/常用DSL语句/index.html">
 <meta property="og:site_name" content="放开那个姑娘吖">
-<meta property="og:description" content="常用DSL语句查看所有索引1GET /_cat/indices?v  删除某个索引1DELETE /skuinfo  新增索引1PUT /user">
+<meta property="og:description" content="常用DSL语句">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-17T06:50:43.726Z">
+<meta property="og:updated_time" content="2019-08-17T06:59:19.353Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="放开那个姑娘吖">
-<meta name="twitter:description" content="常用DSL语句查看所有索引1GET /_cat/indices?v  删除某个索引1DELETE /skuinfo  新增索引1PUT /user">
+<meta name="twitter:description" content="常用DSL语句">
   
     <link rel="alternative" href="/atom.xml" title="放开那个姑娘吖" type="application/atom+xml">
   
@@ -159,13 +159,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="常用DSL语句"><a href="#常用DSL语句" class="headerlink" title="常用DSL语句"></a>常用DSL语句</h1><h6 id="查看所有索引"><a href="#查看所有索引" class="headerlink" title="查看所有索引"></a>查看所有索引</h6><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GET /_cat/indices?v</span><br></pre></td></tr></table></figure>
+        <h1 id="常用DSL语句"><a href="#常用DSL语句" class="headerlink" title="常用DSL语句"></a>常用DSL语句</h1><a id="more"></a>
+
+<h6 id="查看所有索引"><a href="#查看所有索引" class="headerlink" title="查看所有索引"></a>查看所有索引</h6><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GET /_cat/indices?v</span><br></pre></td></tr></table></figure>
 
 <h6 id="删除某个索引"><a href="#删除某个索引" class="headerlink" title="删除某个索引"></a>删除某个索引</h6><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DELETE /skuinfo</span><br></pre></td></tr></table></figure>
 
 <h6 id="新增索引"><a href="#新增索引" class="headerlink" title="新增索引"></a>新增索引</h6><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PUT /user</span><br></pre></td></tr></table></figure>
-
-<a id="more"></a>
 
 <h6 id="创建映射"><a href="#创建映射" class="headerlink" title="创建映射"></a>创建映射</h6><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">PUT /user/userinfo/_mapping</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    <span class="attr">"properties"</span>: &#123;</span><br><span class="line"></span><br><span class="line">        <span class="attr">"name"</span>: &#123;</span><br><span class="line"></span><br><span class="line">            <span class="attr">"type"</span>: <span class="string">"text"</span>,</span><br><span class="line"></span><br><span class="line">            <span class="attr">"analyzer"</span>: <span class="string">"ik_smart"</span>,</span><br><span class="line"></span><br><span class="line">            <span class="attr">"search_analyzer"</span>: <span class="string">"ik_smart"</span>,</span><br><span class="line"></span><br><span class="line">            <span class="attr">"store"</span>: <span class="literal">false</span></span><br><span class="line">            </span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">        <span class="attr">"city"</span>: &#123;</span><br><span class="line"></span><br><span class="line">            <span class="attr">"type"</span>: <span class="string">"text"</span>,</span><br><span class="line"></span><br><span class="line">            <span class="attr">"analyzer"</span>: <span class="string">"ik_smart"</span>,</span><br><span class="line"></span><br><span class="line">            <span class="attr">"search_analyzer"</span>: <span class="string">"ik_smart"</span>,</span><br><span class="line"></span><br><span class="line">            <span class="attr">"store"</span>: <span class="literal">false</span></span><br><span class="line">            </span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">        <span class="attr">"age"</span>: &#123;</span><br><span class="line">            </span><br><span class="line">            <span class="attr">"type"</span>: <span class="string">"long"</span>,</span><br><span class="line"></span><br><span class="line">            <span class="attr">"store"</span>: <span class="literal">false</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">"description"</span>: &#123;</span><br><span class="line"></span><br><span class="line">            <span class="attr">"type"</span>: <span class="string">"text"</span>,</span><br><span class="line"></span><br><span class="line">            <span class="attr">"analyzer"</span>: <span class="string">"ik_smart"</span>,</span><br><span class="line"></span><br><span class="line">            <span class="attr">"search_analyzer"</span>: <span class="string">"ik_smart"</span>,</span><br><span class="line"></span><br><span class="line">            <span class="attr">"store"</span>: <span class="literal">false</span></span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
