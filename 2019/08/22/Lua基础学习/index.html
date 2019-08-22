@@ -6,16 +6,30 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://blog.ilovetyl.top">
-  <title>Archives | Joe&#39;s blog</title>
+  <title>Joe&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
+  <meta name="description" content="Lua基础学习1.1 lua是什么Lua [1]  是一个小巧的脚本语言。它是巴西里约热内卢天主教大学（Pontifical Catholic University of Rio de Janeiro）里的一个由Roberto Ierusalimschy、Waldemar Celes 和 Luiz Henrique de Figueiredo三人所组成的研究小组于1993年开发的。 其设计目的是为">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Joe&#39;s blog">
-<meta property="og:url" content="http://blog.ilovetyl.top/archives/index.html">
+<meta property="og:url" content="http://blog.ilovetyl.top/2019/08/22/Lua基础学习/index.html">
 <meta property="og:site_name" content="Joe&#39;s blog">
+<meta property="og:description" content="Lua基础学习1.1 lua是什么Lua [1]  是一个小巧的脚本语言。它是巴西里约热内卢天主教大学（Pontifical Catholic University of Rio de Janeiro）里的一个由Roberto Ierusalimschy、Waldemar Celes 和 Luiz Henrique de Figueiredo三人所组成的研究小组于1993年开发的。 其设计目的是为">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/18993085-aca23c5d2b308fe9?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/18993085-1dfbbf7e4935b41d?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/18993085-7fd1bc68ebb30434?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/18993085-eab4eec6ba1d71af?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/18993085-da2ef92072b0ff50?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/18993085-5f17f769b38595b9?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/18993085-f725174b55aa032f?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/18993085-6785069c3c578ed4?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/18993085-1fd69aea35fa8f87?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2019-08-22T07:53:36.127Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Joe&#39;s blog">
+<meta name="twitter:description" content="Lua基础学习1.1 lua是什么Lua [1]  是一个小巧的脚本语言。它是巴西里约热内卢天主教大学（Pontifical Catholic University of Rio de Janeiro）里的一个由Roberto Ierusalimschy、Waldemar Celes 和 Luiz Henrique de Figueiredo三人所组成的研究小组于1993年开发的。 其设计目的是为">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/18993085-aca23c5d2b308fe9?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="Joe&#39;s blog" type="application/atom+xml">
   
@@ -176,70 +190,400 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Lua基础学习" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="Lua基础学习"><a href="#Lua基础学习" class="headerlink" title="Lua基础学习"></a>Lua基础学习</h1><h2 id="1-1-lua是什么"><a href="#1-1-lua是什么" class="headerlink" title="1.1 lua是什么"></a>1.1 lua是什么</h2><p>Lua [1]  是一个小巧的脚本语言。它是巴西里约热内卢天主教大学（Pontifical Catholic University of Rio de Janeiro）里的一个由Roberto Ierusalimschy、Waldemar Celes 和 Luiz Henrique de Figueiredo三人所组成的研究小组于1993年开发的。 其设计目的是为了通过灵活嵌入应用程序中从而为应用程序提供灵活的扩展和定制功能。Lua由标准C编写而成，几乎在所有操作系统和平台上都可以编译，运行。Lua并没有提供强大的库，这是由它的定位决定的。所以Lua不适合作为开发独立应用程序的语言。Lua 有一个同时进行的JIT项目，提供在特定平台上的即时编译功能。</p>
+<a id="more"></a>
+<p>简单来说：</p>
+<p>Lua 是一种轻量小巧的脚本语言，用标准C语言编写并以源代码形式开放， 其设计目的是为了嵌入应用程序中，从而为应用程序提供灵活的扩展和定制功能。</p>
+<h2 id="1-2-特性"><a href="#1-2-特性" class="headerlink" title="1.2 特性"></a>1.2 特性</h2><ul>
+<li>支持面向过程(procedure-oriented)编程和函数式编程(functional programming)；</li>
+<li>自动内存管理；只提供了一种通用类型的表（table），用它可以实现数组，哈希表，集合，对象；</li>
+<li>语言内置模式匹配；闭包(closure)；函数也可以看做一个值；提供多线程（协同进程，并非操作系统所支持的线程）支持；</li>
+<li>通过闭包和table可以很方便地支持面向对象编程所需要的一些关键机制，比如数据抽象，虚函数，继承和重载等。</li>
+</ul>
+<h2 id="1-3-应用场景"><a href="#1-3-应用场景" class="headerlink" title="1.3 应用场景"></a>1.3 应用场景</h2><ul>
+<li>游戏开发</li>
+<li>独立应用脚本</li>
+<li>Web 应用脚本</li>
+<li>扩展和数据库插件如：MySQL Proxy 和 MySQL WorkBench</li>
+<li>安全系统，如入侵检测系统</li>
+<li>redis中嵌套调用实现类似事务的功能</li>
+<li>web容器中应用处理一些过滤 缓存等等的逻辑，例如nginx。</li>
+</ul>
+<h2 id="1-4-lua的安装"><a href="#1-4-lua的安装" class="headerlink" title="1.4 lua的安装"></a>1.4 lua的安装</h2><p>有linux版本的安装也有mac版本的安装。。我们采用linux版本的安装，首先我们准备一个linux虚拟机。</p>
+<p>安装步骤,在linux系统中执行下面的命令。</p>
+<pre><code>curl -R -O http://www.lua.org/ftp/lua-5.3.5.tar.gz
+tar zxf lua-5.3.5.tar.gz
+cd lua-5.3.5
+make linux test</code></pre><p>注意：此时安装，有可能会出现如下错误：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/18993085-aca23c5d2b308fe9?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
+<p>此时需要安装lua相关依赖库的支持，执行如下命令即可：</p>
+<pre><code>yum install libtermcap-devel ncurses-devel libevent-devel readline-devel</code></pre><p>此时再执行lua测试看lua是否安装成功</p>
+<pre><code>[root@localhost ~]# lua
+Lua 5.1.4  Copyright (C) 1994-2008 Lua.org, PUC-Rio</code></pre><h2 id="1-5-入门程序"><a href="#1-5-入门程序" class="headerlink" title="1.5 入门程序"></a>1.5 入门程序</h2><p>创建hello.lua文件，内容为</p>
+<p>编辑文件hello.lua</p>
+<pre><code>vi hello.lua</code></pre><p>在文件中输入：</p>
+<pre><code>print(&quot;hello&quot;);</code></pre><p>保存并退出。</p>
+<p>执行命令</p>
+<pre><code>lua hello.lua</code></pre><p>输出为：</p>
+<pre><code>Hello</code></pre><p>效果如下：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/18993085-1dfbbf7e4935b41d?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
+<h2 id="1-6-LUA的基本语法"><a href="#1-6-LUA的基本语法" class="headerlink" title="1.6 LUA的基本语法"></a>1.6 LUA的基本语法</h2><p>lua有交互式编程和脚本式编程。</p>
+<p>交互式编程就是直接输入语法，就能执行。</p>
+<p>脚本式编程需要编写脚本，然后再执行命令 执行脚本才可以。</p>
+<p>一般采用脚本式编程。（例如：编写一个hello.lua的文件，输入文件内容，并执行lua hell.lua即可）</p>
+<p>(1)交互式编程</p>
+<p>Lua 提供了交互式编程模式。我们可以在命令行中输入程序并立即查看效果。</p>
+<p>Lua 交互式编程模式可以通过命令 lua -i 或 lua 来启用：</p>
+<pre><code>lua -i</code></pre><p>如下图：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/18993085-7fd1bc68ebb30434?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
+<p>(2)脚本式编程</p>
+<p>我们可以将 Lua 程序代码保持到一个以 lua 结尾的文件，并执行，该模式称为脚本式编程，例如上面入门程序中将lua语法写到hello.lua文件中。</p>
+<h3 id="1-6-1-注释"><a href="#1-6-1-注释" class="headerlink" title="1.6.1 注释"></a>1.6.1 注释</h3><p>一行注释：两个减号是单行注释:</p>
+<pre><code>--</code></pre><p>多行注释：</p>
+<pre><code>--[[
+ 多行注释
+ 多行注释
+ --]]</code></pre><h3 id="1-6-2-定义变量"><a href="#1-6-2-定义变量" class="headerlink" title="1.6.2 定义变量"></a>1.6.2 定义变量</h3><p>全局变量，默认的情况下，定义一个变量都是全局变量，</p>
+<p>如果要用局部变量 需要声明为local.例如：</p>
+<pre><code>-- 全局变量赋值
+a=1
+-- 局部变量赋值
+local b=2 </code></pre><p>如果变量没有初始化：则 它的值为nil 这和java中的null不同。</p>
+<p>如下图案例：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/18993085-eab4eec6ba1d71af?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
+<h3 id="1-6-3-Lua中的数据类型"><a href="#1-6-3-Lua中的数据类型" class="headerlink" title="1.6.3 Lua中的数据类型"></a>1.6.3 Lua中的数据类型</h3><p>Lua 是动态类型语言，变量不要类型定义,只需要为变量赋值。 值可以存储在变量中，作为参数传递或结果返回。</p>
+<p>Lua 中有 8 个基本类型分别为：nil、boolean、number、string、userdata、function、thread 和 table。</p>
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>nil</td>
+<td>这个最简单，只有值nil属于该类，表示一个无效值（在条件表达式中相当于false）。</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>包含两个值：false和true。</td>
+</tr>
+<tr>
+<td>number</td>
+<td>表示双精度类型的实浮点数</td>
+</tr>
+<tr>
+<td>string</td>
+<td>字符串由一对双引号或单引号来表示</td>
+</tr>
+<tr>
+<td>function</td>
+<td>由 C 或 Lua 编写的函数</td>
+</tr>
+<tr>
+<td>userdata</td>
+<td>表示任意存储在变量中的C数据结构</td>
+</tr>
+<tr>
+<td>thread</td>
+<td>表示执行的独立线路，用于执行协同程序</td>
+</tr>
+<tr>
+<td>table</td>
+<td>Lua 中的表（table）其实是一个”关联数组”（associative arrays），数组的索引可以是数字、字符串或表类型。在 Lua 里，table 的创建是通过”构造表达式”来完成，最简单构造表达式是{}，用来创建一个空表。</td>
+</tr>
+</tbody></table>
+<p>实例：</p>
+<pre><code>print(type(&quot;Hello world&quot;))      --&gt; string
+print(type(10.4*3))             --&gt; number
+print(type(print))              --&gt; function
+print(type(type))               --&gt; function
+print(type(true))               --&gt; boolean
+print(type(nil))                --&gt; nil</code></pre><h3 id="1-6-4-流程控制"><a href="#1-6-4-流程控制" class="headerlink" title="1.6.4 流程控制"></a>1.6.4 流程控制</h3><p>(1)if语句</p>
+<p>Lua if 语句 由一个布尔表达式作为条件判断，其后紧跟其他语句组成。</p>
+<p>语法：</p>
+<pre><code>if(布尔表达式)
+then
+   --[ 在布尔表达式为 true 时执行的语句 --]
+end</code></pre><p>实例：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/18993085-da2ef92072b0ff50?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
+<p>(2)if..else语句</p>
+<p>Lua if 语句可以与 else 语句搭配使用, 在 if 条件表达式为 false 时执行 else 语句代码块。</p>
+<p>语法：</p>
+<pre><code>if(布尔表达式)
+then
+   --[ 布尔表达式为 true 时执行该语句块 --]
+else
+   --[ 布尔表达式为 false 时执行该语句块 --]
+end</code></pre><p>实例：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/18993085-5f17f769b38595b9?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
+<h3 id="1-6-5-循环"><a href="#1-6-5-循环" class="headerlink" title="1.6.5 循环"></a>1.6.5 循环</h3><p>(1)while循环[==满足条件就循环==]</p>
+<p>Lua 编程语言中 while 循环语句在判断条件为 true 时会重复执行循环体语句。<br>语法：</p>
+<pre><code>while(condition)
+do
+   statements
+end</code></pre><p>实例：</p>
+<pre><code>a=10
+while( a &lt; 20 )
+do
+   print(&quot;a 的值为:&quot;, a)
+   a = a+1
+end</code></pre><p>效果如下：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/18993085-f725174b55aa032f?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
+<p>(2)for循环</p>
+<p>Lua 编程语言中 for 循环语句可以重复执行指定语句，重复次数可在 for 语句中控制。</p>
+<p>语法：  1-&gt;10  1:exp1  10:exp2  2:exp3:递增的数量   </p>
+<pre><code>for var=exp1,exp2,exp3 
+do  
+    &lt;执行体&gt;  
+end  </code></pre><p>var 从 exp1 变化到 exp2，每次变化以 exp3 为步长递增 var，并执行一次 “执行体”。exp3 是可选的，如果不指定，默认为1。</p>
+<p>例子：</p>
+<pre><code>for i=1,9,2
+do
+   print(i)
+end</code></pre><p>for i=1,9,2:i=1从1开始循环，9循环数据到9结束，2每次递增2</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/18993085-6785069c3c578ed4?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
+<p>(3)repeat…until语句[==满足条件结束==]</p>
+<p>Lua 编程语言中 repeat…until 循环语句不同于 for 和 while循环，for 和 while 循环的条件语句在当前循环执行开始时判断，而 repeat…until 循环的条件语句在当前循环结束后判断。</p>
+<p>语法：</p>
+<pre><code>repeat
+   statements
+until( condition )</code></pre><p>案例：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/18993085-1fd69aea35fa8f87?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
+<h3 id="1-6-6-函数"><a href="#1-6-6-函数" class="headerlink" title="1.6.6 函数"></a>1.6.6 函数</h3><p>lua中也可以定义函数，类似于java中的方法。例如：</p>
+<pre><code>--[[ 函数返回两个值的最大值 --]]
+function max(num1, num2)
+
+   if (num1 &gt; num2) then
+      result = num1;
+   else
+      result = num2;
+   end
+
+   return result; 
+end
+-- 调用函数
+print(&quot;两值比较最大值为 &quot;,max(10,4))
+print(&quot;两值比较最大值为 &quot;,max(5,6))</code></pre><p>执行之后的结果：</p>
+<pre><code>两值比较最大值为     10
+两值比较最大值为     6</code></pre><p>..:表示拼接</p>
+<h3 id="1-6-7-表"><a href="#1-6-7-表" class="headerlink" title="1.6.7 表"></a>1.6.7 表</h3><p>table 是 Lua 的一种数据结构用来帮助我们创建不同的数据类型，如：数组、字典等。</p>
+<p>Lua也是通过table来解决模块（module）、包（package）和对象（Object）的。</p>
+<p>案例：</p>
+<pre><code>-- 初始化表
+mytable = {}
+
+-- 指定值
+mytable[1]= &quot;Lua&quot;
+
+-- 移除引用
+mytable = nil</code></pre><h3 id="1-6-8-模块"><a href="#1-6-8-模块" class="headerlink" title="1.6.8 模块"></a>1.6.8 模块</h3><p>(1)模块定义</p>
+<p>模块类似于一个封装库，从 Lua 5.1 开始，Lua 加入了标准的模块管理机制，可以把一些公用的代码放在一个文件里，以 API 接口的形式在其他地方调用，有利于代码的重用和降低代码耦合度。</p>
+<p>创建一个文件叫module.lua，在module.lua中创建一个独立的模块，代码如下：</p>
+<pre><code>-- 文件名为 module.lua
+-- 定义一个名为 module 的模块
+module = {}
+
+-- 定义一个常量
+module.constant = &quot;这是一个常量&quot;
+
+-- 定义一个函数
+function module.func1()
+    print(&quot;这是一个公有函数&quot;)
+end
+
+local function func2()
+    print(&quot;这是一个私有函数！&quot;)
+end
+
+function module.func3()
+    func2()
+end
+
+return module</code></pre><p>由上可知，模块的结构就是一个 table 的结构，因此可以像操作调用 table 里的元素那样来操作调用模块里的常量或函数。</p>
+<p>上面的 func2 声明为程序块的局部变量，即表示一个私有函数，因此是不能从外部访问模块里的这个私有函数，必须通过模块里的公有函数来调用.</p>
+<p>(2)require 函数</p>
+<p>require 用于 引入其他的模块，类似于java中的类要引用别的类的效果。</p>
+<p>用法：</p>
+<pre><code>require(&quot;&lt;模块名&gt;&quot;)
+
+require &quot;&lt;模块名&gt;&quot;</code></pre><p>两种都可以。</p>
+<p>我们可以将上面定义的module模块引入使用,创建一个test_module.lua文件，代码如下：</p>
+<pre><code>-- test_module.lua 文件
+-- module 模块为上文提到到 module.lua
+require(&quot;module&quot;)
+
+print(module.constant)
+
+module.func3()</code></pre><p>&nbsp;<br>&nbsp;</p>
+<h6 id="学习网站"><a href="#学习网站" class="headerlink" title="学习网站:"></a>学习网站:</h6><p><a href="https://www.runoob.com/lua/lua-data-types.html" target="_blank" rel="noopener">菜鸟教程—-Lua</a></p>
+<h6 id="CSDN同步更新网址"><a href="#CSDN同步更新网址" class="headerlink" title="CSDN同步更新网址:"></a>CSDN同步更新网址:</h6><p><a href="https://blog.csdn.net/cs950809/article/details/97814825" target="_blank" rel="noopener">放开那个姑娘吖</a></p>
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>欢迎打赏<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/assets/img/alipay.png">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/assets/img/weixinpay.png">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+      <div> 
+        <ul class="post-copyright">
+          <li>
+            <strong>本文作者：</strong>
+            Joe
+          </li>
+          <li>
+            <strong>本文链接：</strong>
+            <a href="http://blog.ilovetyl.top/2019/08/22/Lua基础学习/" title="" target="_blank">http://blog.ilovetyl.top/2019/08/22/Lua基础学习/</a>
+          </li>
+          <li>
+            <strong>版权声明： </strong>
+            本博客所有文章除特别声明外，均采用 <a href="https://www.apache.org/licenses/LICENSE-2.0.html" rel="external nofollow" target="_blank">Apache License 2.0</a> 许可协议。转载请注明出处！
+          </li>
+        </ul>
+      </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
     
     
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/22/Lua基础学习/" class="archive-article-date">
-        <time datetime="2019-08-22T07:50:34.577Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-22</time>
-</a>
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-    	 
+      </div>
+    </span>
+  </div>
+</div>
 
-        <div class="article-info info-on-right">
-          
-          
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://blog.ilovetyl.top/2019/08/22/Lua基础学习/" alt="微信分享二维码"> -->
+    </div>
+</div>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/17/常用DSL语句/" class="archive-article-date">
-        <time datetime="2019-08-17T05:20:12.859Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-17</time>
-</a>
 
+
+<nav id="article-nav">
+  
+  
+    <a href="/2019/08/17/常用DSL语句/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
+
+
+
+
+
+
+
+
+
 
 
           </div>
@@ -280,8 +624,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
